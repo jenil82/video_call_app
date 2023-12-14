@@ -498,20 +498,44 @@ class _Profil_screenState extends State<Profil_screen> {
               Container(
                 height: 48,
                 width: 159,
-                color: Color(0xFFFD1755),
+                decoration: BoxDecoration(
+                    color: Color(0xFFFD1755),
+                    borderRadius: BorderRadius.all(Radius.circular(50))),
                 child: Row(
-                  mainAxisAlignment:MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                        child: Image.asset('assets/images/Frame.png'),),
+                    Row(
+                      children: [
+                        Container(
+                          child: SvgPicture.asset('assets/images/Vector.svg'),
+                        ),
+                        Text("Chat",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),),
+                      ],
+                    ),
                   ],
                 ),
               ),
               Container(
                 height: 48,
                 width: 159,
-                color: Color(0xFFFD1755),
+                decoration: BoxDecoration(
+                    color: Color(0xFFFD1755),
+                    borderRadius: BorderRadius.all(Radius.circular(50))),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          child: SvgPicture.asset('assets/images/vedio call.svg'),
+                        ),
+                        Text("Chat",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),),
+                      ],
+                    ),
+                  ],
+                ),
               ),
+
             ],
           ),
         ),

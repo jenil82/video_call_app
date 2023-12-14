@@ -1,12 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:video_call_app/screen/view/Live_Chat.dart';
 import 'package:video_call_app/screen/view/Login_screen.dart';
 import 'package:video_call_app/screen/view/Permissions.dart';
 import 'package:video_call_app/screen/view/Splash_Screen.dart';
 import 'package:get/get.dart';
 import 'package:video_call_app/screen/view/Video_Call_screen.dart';
 import 'package:video_call_app/screen/view/bottom_navigation_bar.dart';
+import 'package:video_call_app/screen/view/caillng.dart';
 import 'package:video_call_app/screen/view/profil_screen.dart';
+import 'package:video_call_app/screen/view/profil_view.dart';
 
 void main() {
   runApp(
@@ -17,7 +20,11 @@ void main() {
         // 'Permissions':(context) => Permissions_screen(),
         // 'Video_Call':(context) => Video_Call_screen(),
         // 'nav':(p0) => Bottom(),
-        '/':(context) =>Profil_screen(),
+        // 'profil':(context) =>Profil_screen(),
+        // 'Live_chat':(context) =>Live_Chat_screen(),
+        '/':(context) =>CallingScreen(),
+        // 'calling':(context) =>CallingScreen(),
+
       },
     ),
   );

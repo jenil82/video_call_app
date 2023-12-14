@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:video_call_app/screen/view/Live_Chat.dart';
 import 'package:video_call_app/screen/view/Login_screen.dart';
 import 'package:video_call_app/screen/view/Permissions.dart';
 import 'package:video_call_app/screen/view/Video_Call_screen.dart';
@@ -17,7 +18,7 @@ class Bottom extends StatefulWidget {
 class _BottomState extends State<Bottom> {
   List bNb = [
   Video_Call_screen(),
-  Permissions_screen(),
+  Live_Chat_screen(),
     Profil_screen(),
   ];
   int i = 0;

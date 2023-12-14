@@ -15,7 +15,7 @@ class Splash_Screen extends StatefulWidget {
 class _Splash_ScreenState extends State<Splash_Screen> {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds:5), () {
+    Timer(Duration(seconds: 5), () {
       Get.offNamed('nav');
     });
     return SafeArea(
@@ -25,7 +25,10 @@ class _Splash_ScreenState extends State<Splash_Screen> {
           child: Text(
             "Video Call",
             style: TextStyle(
-                color: Colors.white, fontSize:Get.height/20, fontWeight: FontWeight.w800),
+                color: Colors.white,
+                fontSize: Get.height / 20,
+                fontWeight: FontWeight.w800
+            ),
           ),
         ),
       ),
