@@ -42,7 +42,9 @@ class _Permissions_screenState extends State<Permissions_screen> {
                     fontWeight: FontWeight.w400),
               )),
             ),
-            SizedBox(height: Get.height/20,),
+            SizedBox(
+              height: Get.height / 20,
+            ),
             Container(
               height: 100,
               width: 335,
@@ -80,7 +82,9 @@ class _Permissions_screenState extends State<Permissions_screen> {
                 ],
               ),
             ),
-            SizedBox(height: Get.height/20,),
+            SizedBox(
+              height: Get.height / 20,
+            ),
             Container(
               height: 100,
               width: 335,
@@ -120,21 +124,28 @@ class _Permissions_screenState extends State<Permissions_screen> {
             ),
           ],
         ),
-        floatingActionButton:  InkWell(
+        floatingActionButton: InkWell(
           onTap: () {
-            Get.toNamed('Video_Call');
+            Get.toNamed('nav');
           },
           child: Container(
-              decoration: BoxDecoration(color: Colors.pink,borderRadius: BorderRadius.circular(Get.height/50)),
-              height:48,
+              decoration: BoxDecoration(
+                  color: Colors.pink,
+                  borderRadius: BorderRadius.circular(Get.height / 50)),
+              height: 48,
               width: 144,
-              child: Row(mainAxisAlignment: MainAxisAlignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Center(child: Text("Continue",style: TextStyle(color: Colors.white),)),
+                  Center(
+                    child: Text(
+                      "Continue",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                   SvgPicture.asset("assets/images/arrow_forward.svg"),
                 ],
-              )
-          ),
+              )),
         ),
       ),
     );

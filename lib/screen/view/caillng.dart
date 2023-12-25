@@ -49,12 +49,12 @@ class _CallingScreenState extends State<CallingScreen> {
                             borderRadius: BorderRadius.all(
                               Radius.circular(50),
                             ),
-                            color: Colors.pink,
+                            color: Colors.black45,
                           ),
                         ),
                         SvgPicture.asset(
                           "assets/images/Mute.svg",
-                          height: 50,
+                          height: 40,
                         ),
                       ],
                     ),
@@ -80,12 +80,12 @@ class _CallingScreenState extends State<CallingScreen> {
                             borderRadius: BorderRadius.all(
                               Radius.circular(50),
                             ),
-                            color: Colors.pink,
+                            color: Colors.black45,
                           ),
                         ),
                         SvgPicture.asset(
                           "assets/images/Flip.svg",
-                          height: 50,
+                          height: 40,
                         ),
                       ],
                     ),
@@ -111,12 +111,12 @@ class _CallingScreenState extends State<CallingScreen> {
                             borderRadius: BorderRadius.all(
                               Radius.circular(50),
                             ),
-                            color: Colors.pink,
+                            color: Colors.red,
                           ),
                         ),
                         SvgPicture.asset(
                           "assets/images/Close.svg",
-                          height: 50,
+                          height: 40,
                         ),
                       ],
                     ),
