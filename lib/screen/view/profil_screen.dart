@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:video_call_app/screen/videocontroller.dart';
 
 class Profil_screen extends StatefulWidget {
   const Profil_screen({super.key});
@@ -11,6 +12,8 @@ class Profil_screen extends StatefulWidget {
 }
 
 class _Profil_screenState extends State<Profil_screen> {
+  VideoController videoController = Get.put(VideoController());
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -22,7 +25,7 @@ class _Profil_screenState extends State<Profil_screen> {
               Container(
                 height: Get.height / 2.2,
                 child: Image.asset(
-                  'assets/images/Img4.png',
+                  '${videoController.videoCallList[videoController.changeIndex.value].image}',
                   fit: BoxFit.cover,
                   height: Get.height / 2.2,
                 ),
@@ -33,7 +36,7 @@ class _Profil_screenState extends State<Profil_screen> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Guy Hawkins",
+                      "${videoController.videoCallList[videoController.changeIndex.value].name}".toUpperCase(),
                       style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w600,
@@ -63,7 +66,7 @@ class _Profil_screenState extends State<Profil_screen> {
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
               Row(
@@ -495,47 +498,71 @@ class _Profil_screenState extends State<Profil_screen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                height: 48,
-                width: 159,
-                decoration: BoxDecoration(
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  height: 48,
+                  width: 159,
+                  decoration: BoxDecoration(
                     color: Color(0xFFFD1755),
-                    borderRadius: BorderRadius.all(Radius.circular(50))),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          child: SvgPicture.asset('assets/images/Vector.svg'),
-                        ),
-                        Text("Chat",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),),
-                      ],
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(50),
                     ),
-                  ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            child: SvgPicture.asset('assets/images/Vector.svg'),
+                          ),
+                          Text(
+                            "Chat",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Container(
-                height: 48,
-                width: 159,
-                decoration: BoxDecoration(
-                    color: Color(0xFFFD1755),
-                    borderRadius: BorderRadius.all(Radius.circular(50))),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          child: SvgPicture.asset('assets/images/vedio call.svg'),
-                        ),
-                        Text("Chat",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),),
-                      ],
-                    ),
-                  ],
+              InkWell(
+                onTap: () {
+                  Get.toNamed('calling');
+                },
+                child: Container(
+                  height: 48,
+                  width: 159,
+                  decoration: BoxDecoration(
+                      color: Color(0xFFFD1755),
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            child: SvgPicture.asset(
+                                'assets/images/vedio call.svg'),
+                          ),
+                          Text(
+                            "Chat",
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-
             ],
           ),
         ),

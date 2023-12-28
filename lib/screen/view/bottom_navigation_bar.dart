@@ -7,6 +7,7 @@ import 'package:video_call_app/screen/view/Login_screen.dart';
 import 'package:video_call_app/screen/view/Permissions.dart';
 import 'package:video_call_app/screen/view/Video_Call_screen.dart';
 import 'package:video_call_app/screen/view/profil_screen.dart';
+import 'package:video_call_app/screen/view/profil_view.dart';
 
 class Bottom extends StatefulWidget {
   const Bottom({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _BottomState extends State<Bottom> {
   List bNb = [
   Video_Call_screen(),
   Live_Chat_screen(),
-    Profil_screen(),
+    Profil_view(),
   ];
   int i = 0;
 

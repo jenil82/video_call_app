@@ -52,7 +52,7 @@ class _Esther_HowardState extends State<Esther_Howard> {
                         borderRadius: BorderRadius.circular(50),
                         color: Colors.white,
                       ),
-                      child: Image.asset("assets/images/Icon1.png", height: 20),
+                      child: Image.asset("assets/images/Icon1.png", height: 50),
                     ),
                     SizedBox(
                       height: Get.height / 2.5,

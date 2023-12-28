@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:video_call_app/screen/videocontroller.dart';
 
 class Video_Call_screen extends StatefulWidget {
   const Video_Call_screen({super.key});
@@ -12,6 +13,8 @@ class Video_Call_screen extends StatefulWidget {
 }
 
 class _Video_Call_screenState extends State<Video_Call_screen> {
+  VideoController videoController = Get.put(VideoController());
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -22,7 +25,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
             Container(
               height: 108,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xFF1D2029),
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(10),
@@ -32,8 +35,8 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       "Video Call",
                       style: TextStyle(
@@ -54,7 +57,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                               height: 400,
                               width: 335,
                               decoration: BoxDecoration(
-                                color: Color(0xFF1D2029),
+                                color: const Color(0xFF1D2029),
                                 borderRadius: BorderRadius.circular(16),
                                 border: Border.all(
                                   color: Colors.white,
@@ -64,15 +67,14 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 5),
+                                  const Padding(
+                                    padding: EdgeInsets.only(top: 5),
                                     child: Text(
                                       "Purchase Coins",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.w600,
-                                          fontSize: 20
-                                      ),
+                                          fontSize: 20),
                                     ),
                                   ),
                                   Padding(
@@ -82,7 +84,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                       width: 292,
                                       height: 92,
                                       decoration: BoxDecoration(
-                                        color: Color(0xFF0C0F18),
+                                        color: const Color(0xFF0C0F18),
                                         borderRadius: BorderRadius.circular(16),
                                       ),
                                       child: Row(
@@ -96,7 +98,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                   borderRadius:
                                                       BorderRadius.circular(50),
                                                   color: Colors.white10),
-                                              child: Center(
+                                              child: const Center(
                                                 child: Text(
                                                   "1",
                                                   style: TextStyle(
@@ -117,11 +119,13 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                   height: 23,
                                                   width: 87,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0xFFEF2176),
+                                                    color:
+                                                        const Color(0xFFEF2176),
                                                     borderRadius:
-                                                        BorderRadius.circular(50),
+                                                        BorderRadius.circular(
+                                                            50),
                                                   ),
-                                                  child: Center(
+                                                  child: const Center(
                                                     child: Text(
                                                       "Basic Pack",
                                                       style: TextStyle(
@@ -129,15 +133,15 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                     ),
                                                   ),
                                                 ),
-                                                Row(
+                                                const Row(
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Align(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsets
-                                                                .only(top: 5),
+                                                            EdgeInsets.only(
+                                                                top: 5),
                                                         child: Text(
                                                           "₹",
                                                           style: TextStyle(
@@ -170,8 +174,8 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                           .bottomCenter,
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsets
-                                                                .only(top: 8),
+                                                            EdgeInsets.only(
+                                                                top: 8),
                                                         child: Text(
                                                           "/100-Coins",
                                                           style: TextStyle(
@@ -196,7 +200,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                               height: 20,
                                               width: 20,
                                               decoration: BoxDecoration(
-                                                color: Color(0xFF1D2029),
+                                                color: const Color(0xFF1D2029),
                                                 borderRadius:
                                                     BorderRadius.circular(16),
                                                 border: Border.all(
@@ -212,15 +216,16 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(
-                                        left: 20,
-                                        right: 20,
-                                        top: 2,
-                                        bottom: 20),
+                                      left: 20,
+                                      right: 20,
+                                      top: 2,
+                                      bottom: 20,
+                                    ),
                                     child: Container(
                                       width: 292,
                                       height: 92,
                                       decoration: BoxDecoration(
-                                        color: Color(0xFF0C0F18),
+                                        color: const Color(0xFF0C0F18),
                                         borderRadius: BorderRadius.circular(16),
                                       ),
                                       child: Row(
@@ -234,7 +239,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                   borderRadius:
                                                       BorderRadius.circular(50),
                                                   color: Colors.white10),
-                                              child: Center(
+                                              child: const Center(
                                                 child: Text(
                                                   "2",
                                                   style: TextStyle(
@@ -255,25 +260,29 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                   height: 30,
                                                   width: 87,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0xFFB15B2B),
-                                                    borderRadius: BorderRadius.circular(50),
+                                                    color:
+                                                        const Color(0xFFB15B2B),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            50),
                                                   ),
-                                                  child: Center(
+                                                  child: const Center(
                                                     child: Text(
                                                       "Basic Pack",
-                                                      style: TextStyle(color:Colors.white),
+                                                      style: TextStyle(
+                                                          color: Colors.white),
                                                     ),
                                                   ),
                                                 ),
-                                                Row(
+                                                const Row(
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Align(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsets
-                                                                .only(top: 5),
+                                                            EdgeInsets.only(
+                                                                top: 5),
                                                         child: Text(
                                                           "₹",
                                                           style: TextStyle(
@@ -305,8 +314,8 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                           .bottomCenter,
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsets
-                                                                .only(top: 8),
+                                                            EdgeInsets.only(
+                                                                top: 8),
                                                         child: Text(
                                                           "/200-Coins",
                                                           style: TextStyle(
@@ -314,7 +323,8 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                                   Colors.white,
                                                               fontSize: 16,
                                                               fontWeight:
-                                                                  FontWeight.w400),
+                                                                  FontWeight
+                                                                      .w400),
                                                         ),
                                                       ),
                                                     ),
@@ -330,7 +340,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                               height: 20,
                                               width: 20,
                                               decoration: BoxDecoration(
-                                                color: Color(0xFF1D2029),
+                                                color: const Color(0xFF1D2029),
                                                 borderRadius:
                                                     BorderRadius.circular(16),
                                                 border: Border.all(
@@ -354,7 +364,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                       width: 292,
                                       height: 92,
                                       decoration: BoxDecoration(
-                                        color: Color(0xFF0C0F18),
+                                        color: const Color(0xFF0C0F18),
                                         borderRadius: BorderRadius.circular(16),
                                       ),
                                       child: Row(
@@ -368,7 +378,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                   borderRadius:
                                                       BorderRadius.circular(50),
                                                   color: Colors.white10),
-                                              child: Center(
+                                              child: const Center(
                                                 child: Text(
                                                   "3",
                                                   style: TextStyle(
@@ -381,19 +391,21 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                             ),
                                           ),
                                           Padding(
-                                            padding: const EdgeInsets.only(top: 20),
+                                            padding:
+                                                const EdgeInsets.only(top: 20),
                                             child: Column(
                                               children: [
                                                 Container(
                                                   height: 23,
                                                   width: 87,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0xFF13A7F9),
+                                                    color:
+                                                        const Color(0xFF13A7F9),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             50),
                                                   ),
-                                                  child: Center(
+                                                  child: const Center(
                                                     child: Text(
                                                       "Basic Pack",
                                                       style: TextStyle(
@@ -401,15 +413,15 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                     ),
                                                   ),
                                                 ),
-                                                Row(
+                                                const Row(
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Align(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsets
-                                                                .only(top: 5),
+                                                            EdgeInsets.only(
+                                                                top: 5),
                                                         child: Text(
                                                           "₹",
                                                           style: TextStyle(
@@ -442,8 +454,8 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                                           .bottomCenter,
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsets
-                                                                .only(top: 8),
+                                                            EdgeInsets.only(
+                                                                top: 8),
                                                         child: Text(
                                                           "/100-Coins",
                                                           style: TextStyle(
@@ -468,7 +480,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                                               height: 20,
                                               width: 20,
                                               decoration: BoxDecoration(
-                                                color: Color(0xFF1D2029),
+                                                color: const Color(0xFF1D2029),
                                                 borderRadius:
                                                     BorderRadius.circular(16),
                                                 border: Border.all(
@@ -494,7 +506,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(color: Colors.white),
                             boxShadow: [
-                              BoxShadow(
+                              const BoxShadow(
                                 color: Color(0xFF1D2029),
                               ),
                             ],
@@ -502,7 +514,7 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "00",
                                 style: TextStyle(
                                     color: Colors.white,
@@ -526,119 +538,117 @@ class _Video_Call_screenState extends State<Video_Call_screen> {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GestureDetector(
-                  onTap: () {
-                    Get.toNamed('profil');
-                  },
-                  child: GridView.custom(
-                    gridDelegate: SliverWovenGridDelegate.count(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 8,
-                      crossAxisSpacing: 8,
-                      pattern: [
-                        WovenGridTile(1),
-                        WovenGridTile(
-                          5 / 7,
-                          crossAxisRatio: 0.9,
-                          alignment: AlignmentDirectional.topCenter,
-                        ),
-                      ],
-                    ),
-                    childrenDelegate: SliverChildBuilderDelegate(
-                      (context, index) => Stack(
-                        alignment: Alignment.bottomCenter,
-                        children: [
-                          ClipRRect(
+                child: GridView.builder(
+                  itemCount: videoController.videoCallList.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2, mainAxisSpacing: 10),
+                  itemBuilder: (context, index) {
+                    return InkWell(
+                      onTap: () {
+                        videoController.changeIndex.value=index;
+                        Get.toNamed('profil');
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Stack(
+                          alignment: Alignment.bottomCenter,
+                          children: [
+                            ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.asset('assets/images/photo.png')),
-                          Container(
-                            height: 65,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.black12,
-                                  Colors.black12,
-                                  Colors.black
-                                ],
-                              ),
+                              child: Image.asset(
+                                  '${videoController.videoCallList[index].image}'),
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                left: 20,
+                            Container(
+                              height: 65,
+                              width: double.infinity,
+                              decoration: const BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    Colors.black38,
+                                    Colors.black38,
+                                    Colors.black38,
+                                  ],
+                                ),
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    child: Text(
-                                      "Marvin McKinney",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w600),
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 20,
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      child: Text(
+                                        "${videoController.videoCallList[index].name}"
+                                            .toUpperCase(),
+                                        style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                      alignment: Alignment.center,
                                     ),
-                                    alignment: Alignment.center,
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Container(
-                                        height: 18,
-                                        width: 26,
-                                        decoration: BoxDecoration(
-                                          color: Colors.orange,
-                                          borderRadius:
-                                              BorderRadius.circular(50),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            "20",
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 8,
-                                                fontWeight: FontWeight.w200),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                          height: 20,
+                                          width: 35,
+                                          decoration: BoxDecoration(
+                                            color: Colors.orange,
+                                            borderRadius:
+                                                BorderRadius.circular(50),
                                           ),
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 18,
-                                        width: 26,
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(
-                                            begin: Alignment.topCenter,
-                                            end: Alignment.bottomCenter,
-                                            colors: [
-                                              Color(0xFFA044FF),
-                                              Color(0xFFF82E4B),
-                                            ],
-                                          ),
-                                        ),
-                                        child: Center(
+                                          child: Center(
                                             child: Text(
-                                          "india",
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 8),
-                                        )),
-                                      ),
-                                    ],
-                                  )
-                                ],
+                                              "${videoController.videoCallList[index].coin}",
+                                              style: const TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 8,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          height: 20,
+                                          width: 35,
+                                          decoration: const BoxDecoration(
+                                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                                            gradient: LinearGradient(
+                                              begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [
+                                                Color(0xFFA044FF),
+                                                Color(0xFFF82E4B),
+                                              ],
+                                            ),
+                                          ),
+                                          child: Center(
+                                              child: Text(
+                                            "${videoController.videoCallList[index].country}",
+                                            style: const TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 8),
+                                          )),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ),
+                    );
+                  },
                 ),
               ),
             ),

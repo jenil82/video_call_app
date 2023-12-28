@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:video_call_app/screen/view/Esther_Howard.dart';
 import 'package:video_call_app/screen/view/Live_Chat.dart';
 import 'package:video_call_app/screen/view/Login_screen.dart';
+import 'package:video_call_app/screen/view/Online.dart';
 import 'package:video_call_app/screen/view/Permissions.dart';
 import 'package:video_call_app/screen/view/Splash_Screen.dart';
 import 'package:get/get.dart';
@@ -16,7 +17,7 @@ void main() {
   runApp(
     GetMaterialApp(debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context) => Splash_Screen(),
+      /* '/':(context) => Splash_Screen(),
         'Login_screen':(context) => Login_Screen(),
         'Permissions':(context) => Permissions_screen(),
         'Video_Call':(context) => Video_Call_screen(),
@@ -25,6 +26,8 @@ void main() {
         'Live_chat':(context) =>Live_Chat_screen(),
         'calling':(context) =>CallingScreen(),
         'Esther_Howard':(context) =>Esther_Howard(),
+        'online':(p0) => Online_screen(),*/
+        '/':(context) =>Esther_Howard(),
       },
     ),
   );

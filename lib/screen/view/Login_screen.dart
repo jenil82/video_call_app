@@ -12,6 +12,9 @@ class Login_Screen extends StatefulWidget {
 }
 
 class _Login_ScreenState extends State<Login_Screen> {
+  TextEditingController nuber = TextEditingController();
+  TextEditingController name = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,7 +26,7 @@ class _Login_ScreenState extends State<Login_Screen> {
             Container(
               alignment: Alignment.centerLeft,
               child: Padding(
-                padding: const EdgeInsets.only(left: 8),
+                padding: const EdgeInsets.only(left: 20),
                 child: Text(
                   "Login",
                   style:
@@ -34,7 +37,7 @@ class _Login_ScreenState extends State<Login_Screen> {
             Container(
               alignment: Alignment.centerLeft,
               child: Padding(
-                padding: const EdgeInsets.only(left: 8),
+                padding: const EdgeInsets.only(left: 20),
                 child: Text(
                   "This Permission is used for video calls.",
                   style:
@@ -54,19 +57,19 @@ class _Login_ScreenState extends State<Login_Screen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                left: 20,right: 20,top: 8
-              ),
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 8),
               child: TextField(
                 style: TextStyle(color: Colors.white),
+                controller: name,
                 decoration: InputDecoration(
                   hintText: "Enter Your Name",
                   hintStyle: TextStyle(color: Colors.white),
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white24,
-                      ),
-                      borderRadius: BorderRadius.circular(Get.height / 50)),
+                    borderSide: BorderSide(
+                      color: Colors.white24,
+                    ),
+                    borderRadius: BorderRadius.circular(Get.height / 50),
+                  ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.white,
@@ -84,7 +87,9 @@ class _Login_ScreenState extends State<Login_Screen> {
               height: Get.height / 50,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20,),
+              padding: const EdgeInsets.only(
+                left: 20,
+              ),
               child: Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -95,11 +100,12 @@ class _Login_ScreenState extends State<Login_Screen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 8,right: 20,left:20),
+              padding: const EdgeInsets.only(top: 8, right: 20, left: 20),
               child: TextField(
                 style: TextStyle(color: Colors.white),
                 cursorColor: Colors.white,
                 keyboardType: TextInputType.number,
+                controller: nuber,
                 maxLength: 10,
                 decoration: InputDecoration(
                   hintText: "Enter Your Mobile Number",
@@ -122,7 +128,8 @@ class _Login_ScreenState extends State<Login_Screen> {
                 ),
               ),
             ),
-            Align(alignment: Alignment.centerRight,
+            Align(
+              alignment: Alignment.centerRight,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
@@ -130,16 +137,22 @@ class _Login_ScreenState extends State<Login_Screen> {
                     Get.toNamed('Permissions');
                   },
                   child: Container(
-                    decoration: BoxDecoration(color: Colors.pink,borderRadius: BorderRadius.circular(Get.height/50)),
-                    height:48,
-                    width: 144,
-                    child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Center(child: Text("Continue",style: TextStyle(color: Colors.white),)),
-                       SvgPicture.asset("assets/images/arrow_forward.svg"),
-                      ],
-                    )
-                  ),
+                      decoration: BoxDecoration(
+                          color: Colors.pink,
+                          borderRadius: BorderRadius.circular(Get.height / 50)),
+                      height: 48,
+                      width: 144,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Center(
+                              child: Text(
+                            "Continue",
+                            style: TextStyle(color: Colors.white),
+                          )),
+                          SvgPicture.asset("assets/images/arrow_forward.svg"),
+                        ],
+                      )),
                 ),
               ),
             )

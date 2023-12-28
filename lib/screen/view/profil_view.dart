@@ -117,7 +117,7 @@ class _Profil_viewState extends State<Profil_view> {
                       child: SvgPicture.asset('assets/images/chet.svg'),
                     ),
                     Text(
-                      "Phone Number",
+                      "Chats",
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.white,
@@ -141,7 +141,7 @@ class _Profil_viewState extends State<Profil_view> {
                       child: SvgPicture.asset('assets/images/manu.svg'),
                     ),
                     Text(
-                      "Phone Number",
+                      "Help & Supportss",
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.white,
@@ -167,7 +167,7 @@ class _Profil_viewState extends State<Profil_view> {
                       child: SvgPicture.asset('assets/images/look.svg'),
                     ),
                     Text(
-                      "Phone Number",
+                      "Privacy policy",
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.white,
